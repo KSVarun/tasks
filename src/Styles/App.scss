@@ -1,0 +1,80 @@
+body {
+  height: 100vh;
+  margin: 10px;
+  background: #f5f5f5;
+  font-family: sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+.completed {
+  background-color: green;
+}
+
+.task-card {
+  cursor: pointer;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85vw;
+  form {
+    padding: 50px;
+    justify-self: flex-start;
+    width: 45%;
+    section {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        gap: 10px;
+      }
+    }
+  }
+  .tasks-section {
+    display: flex;
+    justify-self: flex-end;
+    padding: 50px;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 10px;
+    align-items: center;
+    .task-card {
+      background: #fff;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 3px 3px 5px #aaaaaa;
+      max-width: 15em;
+      min-width: 5em;
+      justify-content: space-between;
+      .cancel-button {
+        svg {
+          font-size: 25px;
+        }
+      }
+      .task-details {
+        display: flex;
+        justify-content: space-evenly;
+        height: 80px;
+        padding: 4px 5px;
+        min-height: 30px;
+        gap: 5px;
+        flex-direction: column;
+        .task-description {
+          font-size: 15px;
+        }
+      }
+    }
+    .task-card.completed {
+      background-color: #72caf2;
+    }
+  }
+}
