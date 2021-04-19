@@ -72,12 +72,14 @@ const App: React.FC = () => {
               value={name}
               autoFocus
               inputRef={nameFieldRef}
+              autoComplete='off'
             />
             <TextField
               id='description'
               label='Description'
               onChange={handleTaskDescriptionChange}
               value={description}
+              autoComplete='off'
             />
           </div>
           <Button
@@ -86,7 +88,7 @@ const App: React.FC = () => {
             color='primary'
             disableElevation
           >
-            SUBMIT
+            ADD
           </Button>
         </section>
       </form>
